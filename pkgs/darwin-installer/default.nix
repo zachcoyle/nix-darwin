@@ -3,7 +3,6 @@
 let
   nixPath = stdenv.lib.concatStringsSep ":" [
     "darwin-config=${toString ./configuration.nix}"
-    "darwin=${toString ../..}"
     "nixpkgs=${toString pkgs.path}"
     "$HOME/.nix-defexpr/channels"
     "/nix/var/nix/profiles/per-user/root/channels"
