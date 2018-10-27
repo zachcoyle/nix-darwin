@@ -38,7 +38,7 @@ in
 
     system.activationScripts.script.text = ''
       #! ${stdenv.shell}
-      set -e
+      set -ex
       set -o pipefail
       export PATH="${pkgs.gnugrep}/bin:${pkgs.coreutils}/bin:@out@/sw/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
@@ -82,7 +82,7 @@ in
 
     system.activationScripts.userScript.text = ''
       #! ${stdenv.shell}
-      set -e
+      set -ex
       set -o pipefail
       export PATH="${pkgs.gnugrep}/bin:${pkgs.coreutils}/bin:@out@/sw/bin:/usr/bin:/bin"
 
