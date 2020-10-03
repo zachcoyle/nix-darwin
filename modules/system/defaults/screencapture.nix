@@ -21,4 +21,12 @@ with lib;
         '';
     };
   };
+
+  system.defaults.screencapture.showsClicks = mkOption {
+    type = types.nullOr (types.enum [ 0 1 ]);
+    default = null;
+    description = ''
+      Enable click highlights in video screencaptures. The default is 0 (false)
+    '';
+  };
 }
